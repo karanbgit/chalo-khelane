@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       {/* Fixed width 1920px and height 700px */}
-      <div className="w-full max-w-[1920px] lg:h-[700px] mx-auto overflow-hidden">
+      <div className="w-full  lg:h-[700px] mx-auto overflow-hidden">
         {/* Navigation */}
         <nav className="absolute top-0 left-0 right-0 z-50 bg-white rounded-full mx-auto mt-6 max-w-7xl shadow-lg">
           <div className="px-6">
@@ -204,24 +204,27 @@ function Header() {
               </div>
 
               {/* Right Side - Circular Badge - HIDDEN ON MOBILE */}
-              <div className="hidden lg:block lg:absolute lg:right-[80px] lg:bottom-[128px] xl:right-[170px] xl:bottom-[200px]">
+              <div className="hidden lg:block lg:absolute lg:right-[80px] lg:bottom-[128px] xl:right-[270px] xl:bottom-[200px]">
                 <div className="relative w-36 h-36">
                   {/* Rotating Text Circle */}
-                  <svg className="w-full h-full" viewBox="0 0 200 200">
-                    <defs>
-                      <path
-                        id="circlePath"
-                        d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-                      />
-                    </defs>
-                    <text className="text-[8.5px] fill-white font-medium tracking-wider uppercase">
-                      <textPath href="#circlePath" startOffset="0">
-                        your Court is your Connect • your Court is your Connect
-                        • your Court is your Connect • your Court is your
-                        Connect •
-                      </textPath>
-                    </text>
-                  </svg>
+                  <div className="absolute inset-0 animate-spin-slower">
+                    <svg className="w-full h-full" viewBox="0 0 200 200">
+                      <defs>
+                        <path
+                          id="circlePath"
+                          d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                        />
+                      </defs>
+
+                      <text className="text-[12px] fill-white font-medium tracking-wider uppercase">
+                        <textPath href="#circlePath" startOffset="0">
+                          your Court is your Connect • your Court is your
+                          Connect • your Court is your Connect • your Court is
+                          your Connect •
+                        </textPath>
+                      </text>
+                    </svg>
+                  </div>
 
                   {/* Center Gradient Ball */}
                   <div className="absolute inset-0 flex items-center justify-center">
